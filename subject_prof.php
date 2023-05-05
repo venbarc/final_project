@@ -162,7 +162,7 @@
                               </div>
                               <div class="col-md-11">
                                 <button type="submit" class="btn btn-primary mb-30" id="add_subject" data-toggle="modal" data-target="#edit_modal6">
-                                  + Add Subject 
+                                  + Add Course Subject 
                                 </button>
 
                                   <?php
@@ -219,7 +219,7 @@
                                                   </div>
                                                   <div class="col-md-2 pt-15">
                                                       <button class="btn btn-primary" onclick="copyToClipboard('<?php echo addslashes($subject_token) ?>')" title="Copy token to add student to this subject">
-                                                        Subject id
+                                                        Subject ID
                                                       </button>
                                                     </h6>
                                                   </div>
@@ -256,10 +256,7 @@
 
                               </div>
                             </div>
-
                             
-                            
-                                  
                         </div>
                     </div>
                 </div>

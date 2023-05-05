@@ -134,7 +134,7 @@
                             <th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Email</th>
                             <th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Gender</th>
                             <th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Contact</th>
-                            <th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Address</th>
+                            <th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Specialization</th>
                             <th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Date Registered</th>
                             <th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Edit</th>
                             <th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Action</th>
@@ -276,7 +276,7 @@
                             <th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Email</th>
                             <th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Gender</th>
                             <th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Contact</th>
-                            <th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Address</th>
+                            <th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Specialization</th>
                             <th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Date Registered</th>
                             <th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Edit</th>
                             <th class="text-center text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Action</th>

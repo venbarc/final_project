@@ -370,7 +370,7 @@
                                                     {
                                                       ?>
                                                         <img src="assets/img/profile/default-profile.png" class="class_prof_img">
-                                                        <div class="mt-5"> <strong><?php echo $student_email ?></strong> </div> 
+                                                        <div class="mt-2"> <strong><?php echo $student_email ?></strong> </div> 
                                                       <?php
                                                     }
                                                     else

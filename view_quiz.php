@@ -228,7 +228,7 @@
                                             </div>
                                             <div class="col-md-3 mt-3 mb-20">
                                                 <a href="hard_copy.php?subject='.$subject.'&subject_token='.$subject_token.'&quiz_token='.$quiz_token.'&quiz_title='.$quiz_title.'" class="btn btn-dark">
-                                                    <i class="fas fa-file"></i> &nbsp; Make hard copy
+                                                    <i class="fas fa-file"></i> &nbsp; Generate Hard Copy
                                                 </a>
                                             </div>
                                         </div>

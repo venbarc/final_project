@@ -299,7 +299,7 @@
                                                 <p><?php echo $you_are ?></p>
                                             </div>
                                             <div class="col-sm-4 pb-25 wow fadeInUp" data-wow-delay=".7s">
-                                                <label class="form-label"><h6>Address</h6></label>
+                                                <label class="form-label"><h6>Specialization</h6></label>
                                                 <p><?php echo (isset($special) && !empty($special)) ? $special : '<span class="text-danger"> Add Specialization </span>'; ?></p>
                                             </div>
                                             <div class="col-sm-4 pb-25 wow fadeInUp" data-wow-delay=".7s">
