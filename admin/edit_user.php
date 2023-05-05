@@ -63,7 +63,7 @@
                         $lname = $row['lname'];
                         $email = $row['email'];
                         $contact = $row['contact'];
-                        $address = $row['address'];
+                        $special = $row['special'];
 
                         // if update button in pressed 
                         if(isset($_POST['update_user']))
@@ -72,10 +72,10 @@
                           $lname = $_POST['lname'];
                           $email = $_POST['email'];
                           $contact = $_POST['contact'];
-                          $address = $_POST['address'];
+                          $special = $_POST['special'];
 
                           $sql_update_user = "update users set fname='$fname',
-                          lname='$lname', email='$email', contact='$contact', address ='$address' where id='$id' ";
+                          lname='$lname', email='$email', contact='$contact', special ='$special' where id='$id' ";
                           $res_update_user = mysqli_query($conn, $sql_update_user);
 
                           if($res_update_user)
@@ -108,10 +108,10 @@
                                     <label class="form-label" for="contact">Contact </label>
                                     <input class="form-control" type="contact" minlength="11" maxlength="11" name="contact" id="contact" value="<?php echo (isset($contact) && !empty($contact)) ? htmlspecialchars($contact) : ''; ?>" placeholder="Add Contact">
                                 </div>
-                                <!-- Address name  -->
+                                <!-- Specialization name  -->
                                 <div class="col-md-6">
-                                    <label class="form-label" for="address">Address </label>
-                                    <input class="form-control" type="text" name="address" id="address" value="<?php echo (isset($address) && !empty($address)) ? htmlspecialchars($address) : ''; ?>" placeholder="Add address">
+                                    <label class="form-label" for="special">Specialization </label>
+                                    <input class="form-control" type="text" name="special" id="special" value="<?php echo (isset($special) && !empty($special)) ? htmlspecialchars($special) : ''; ?>" placeholder="Add Specialization">
                                 </div>
                                 <!-- //submit and cancel btns  -->
                                 <div class="col-md-6">

@@ -28,8 +28,8 @@
                                     <br>
                                 </div>
                                 <div class="col-sm-6 edit_modal1" >
-                                    <label class="form-label"><h6>Address <span style="font-weight:400; font-size:15px;">(Optional)</span></h6></label>
-                                    <input type="text" class="form-control" name="address" value="<?php echo (isset($address) && !empty($address)) ? htmlspecialchars($address) : ''; ?>" placeholder="Add Address">
+                                    <label class="form-label"><h6>Specialization <span style="font-weight:400; font-size:15px;">(Optional)</span></h6></label>
+                                    <input type="text" class="form-control" name="special" value="<?php echo (isset($special) && !empty($special)) ? htmlspecialchars($special) : ''; ?>" placeholder="Add Address">
                                     <br>
                                 </div>
                             </div>

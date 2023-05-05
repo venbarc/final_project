@@ -40,7 +40,7 @@
         $lname = $user['lname'];
         $gender = $user['gender'];
         $contact = $user['contact'];
-        $address = $user['address'];
+        $special = $user['special'];
 
         $image_upload = $user['image_upload'];
 
@@ -84,7 +84,7 @@
                                     $fname = $row['fname'];
                                     $lname = $row['lname'];
                                     $contact = $row['contact'];
-                                    $address = $row['address'];
+                                    $special = $row['special'];
 
                                     // if image is empty 
                                     if(empty($image_upload))
@@ -101,11 +101,11 @@
                                     }else{ 
                                         $contact = $row['contact']; 
                                     }
-                                    if(empty($address))
+                                    if(empty($special))
                                     {
-                                        $address = 'no address</p>';
+                                        $special = 'no Specialization</p>';
                                     }else{
-                                        $address = $row['address'];
+                                        $special = $row['special'];
                                     }
                                     
                                     echo'
@@ -123,7 +123,7 @@
                                                 <div class="profile-img wow fadeInUp" data-wow-delay=".1s">
                                                     <h5>'. $fname .' '. $lname .'</h5>
                                                     '.$email.' <br>
-                                                    '.$contact.' | '.$address.'                                                   
+                                                    '.$contact.' | '.$special.'                                                   
                                                 </div>
                                             
                                        

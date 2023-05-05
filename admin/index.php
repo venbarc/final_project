@@ -150,7 +150,7 @@
                         $email = $row['email'];
                         $gender = $row['gender'];
                         $contact = $row['contact'];
-                        $address = $row['address'];
+                        $special = $row['special'];
                         $image_upload = $row['image_upload'];
                         $date_reg = $row['date_reg'];
 
@@ -173,13 +173,13 @@
                         else{
                           $contact = $row['contact'];
                         }
-                        // if address is empty 
-                        if(empty($address))
+                        // if special is empty 
+                        if(empty($special))
                         {
-                          $address = '<span class="text-danger font-weight-bold text-xl">---</span>';
+                          $special = '<span class="text-danger font-weight-bold text-xl">---</span>';
                         }
                         else{
-                          $address = $row['address'];
+                          $special = $row['special'];
                         }
                         echo'
                         <tr>
@@ -202,7 +202,7 @@
                             '.$contact.'
                           </td>
                           <td class="align-middle text-center text-sm pt-3">
-                            '.$address.'
+                            '.$special.'
                           </td>
                           <td class="align-middle text-center text-sm pt-3">
                             '.$date_reg.'
@@ -292,7 +292,7 @@
                         $email = $row['email'];
                         $gender = $row['gender'];
                         $contact = $row['contact'];
-                        $address = $row['address'];
+                        $special = $row['special'];
                         $image_upload = $row['image_upload'];
                         $date_reg = $row['date_reg'];
 
@@ -315,13 +315,13 @@
                         else{
                           $contact = $row['contact'];
                         }
-                        // if address is empty 
-                        if(empty($address))
+                        // if special is empty 
+                        if(empty($special))
                         {
-                          $address = '<span class="text-danger font-weight-bold text-xl">---</span>';
+                          $special = '<span class="text-danger font-weight-bold text-xl">---</span>';
                         }
                         else{
-                          $address = $row['address'];
+                          $special = $row['special'];
                         }
                         echo'
                         <tr>
@@ -344,7 +344,7 @@
                             '.$contact.'
                           </td>
                           <td class="align-middle text-center text-sm pt-3">
-                            '.$address.'
+                            '.$special.'
                           </td>
                           <td class="align-middle text-center text-sm pt-3">
                             '.$date_reg.'

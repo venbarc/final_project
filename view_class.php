@@ -40,7 +40,7 @@
         $lname = $user['lname'];
         $gender = $user['gender'];
         $contact = $user['contact'];
-        $address = $user['address'];
+        $special = $user['special'];
 
         $image_upload = $user['image_upload'];
 

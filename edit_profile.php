@@ -40,7 +40,7 @@
         $lname = $user['lname'];
         $gender = $user['gender'];
         $contact = $user['contact'];
-        $address = $user['address'];
+        $special = $user['special'];
 
         $image_upload = $user['image_upload'];
 
@@ -97,14 +97,14 @@
                                       $fname = $_POST['fname'];
                                       $lname = $_POST['lname'];
                                       $contact = $_POST['contact'];
-                                      $address = $_POST['address'];
+                                      $special = $_POST['special'];
 
-                                      $sql_update_personal = "update users set fname='$fname', lname='$lname', contact='$contact', address='$address' where id ='$user_id' ";
+                                      $sql_update_personal = "update users set fname='$fname', lname='$lname', contact='$contact', special='$special' where id ='$user_id' ";
                                       $res_update_personal = mysqli_query($conn, $sql_update_personal);
 
                                       echo '
                                         <div class="alert alert-success text-center" role="alert" id="myAlert">
-                                          Successfully Update Personal information.
+                                          Successfully Updated Personal information.
                                         </div>
                                       ';
                                   }
@@ -146,7 +146,7 @@
                                       
                                       $new_pass = $_POST['new_pass'];
                                       $cnew_pass = $_POST['cnew_pass'];
-                                    //pass from database
+                                      //pass from database
                                       $password = $user['password'];
 
                                       //if Current password match database
@@ -225,15 +225,19 @@
                                           } 
                                           else 
                                           {
-                                              echo '<div class="alert alert-danger text-center" role="alert" id="myAlert">Something went wrong. Please try again!</div>';
+                                              echo '<div class="alert alert-danger text-center" role="alert" id="myAlert">
+                                                Something went wrong. Please try again!
+                                              </div>';
                                           }
                                           mysqli_close($conn);
                                       } 
                                       else 
                                       {
-                                          echo '<div class="alert alert-danger text-center" role="alert" id="myAlert">Error Occurred. Please try again later!</div>';
+                                          echo '<div class="alert alert-danger text-center" role="alert" id="myAlert">
+                                            Error Occurred. Please try again later!
+                                          </div>';
                                       }
-                                  }
+                                    }
 //===============================================================End Upload image=====================================================================//
                               ?>
 
@@ -296,7 +300,7 @@
                                             </div>
                                             <div class="col-sm-4 pb-25 wow fadeInUp" data-wow-delay=".7s">
                                                 <label class="form-label"><h6>Address</h6></label>
-                                                <p><?php echo (isset($address) && !empty($address)) ? $address : '<span class="text-danger"> Add Address </span>'; ?></p>
+                                                <p><?php echo (isset($special) && !empty($special)) ? $special : '<span class="text-danger"> Add Specialization </span>'; ?></p>
                                             </div>
                                             <div class="col-sm-4 pb-25 wow fadeInUp" data-wow-delay=".7s">
                                                 <label class="form-label"><h6>Contact</h6></label>

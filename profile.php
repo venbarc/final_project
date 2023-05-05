@@ -15,7 +15,6 @@
   </head>
   <body>
 
-
     <?php
       session_start();
       include "connect.php";
@@ -40,7 +39,7 @@
         $lname = $user['lname'];
         $gender = $user['gender'];
         $contact = $user['contact'];
-        $address = $user['address'];
+        $special = $user['special'];
 
         $image_upload = $user['image_upload'];
 
@@ -91,8 +90,6 @@
                                         <br><br>
                                         <p class="text-primary text-center"> <strong> Registered on : <?php echo $date_reg ?></strong> </p>
                                         <br>
-                                       
-
                                       </div>  
                                   </div>
                                   <br>
@@ -119,8 +116,8 @@
                                       <p class="wow fadeInUp" data-wow-delay=".4s"><?php echo '<strong>Email : </strong> '. $email ?></p> <br>
                                     </div>
                                     <div class="col-md-4">
-                                      <p class="wow fadeInUp" data-wow-delay=".4s"><?php echo '<strong>Address : </strong>' . 
-                                      (isset($address) && !empty($address) ? $address : '<span class="text-danger">Add address</span>') ?></p> <br>
+                                      <p class="wow fadeInUp" data-wow-delay=".4s"><?php echo '<strong>Specialization : </strong>' . 
+                                      (isset($special) && !empty($special) ? $special : '<span class="text-danger">Add Specialization</span>') ?></p> <br>
                                     </div>
                                     <div class="col-md-4">
                                       <p class="wow fadeInUp" data-wow-delay=".4s"><?php echo '<strong>Contact : </strong>' . 
@@ -259,7 +256,7 @@
                                       <div class="col-md-4 pb-10 wow fadeInUp" data-wow-delay=".3s">
                                         <a href="quiz.php">
                                           <div class="card card-1">
-                                            <h3 class="pb-25">Quiz's</h3>
+                                            <h3 class="pb-25">Quizzes</h3>
                                             <p class='text-dark text-'>You can view your available quiz here.</p> <br>
                                             <?php
                                               // count quiz available joining table quiz_type and prof_class

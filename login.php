@@ -139,7 +139,7 @@
                           }
                         ?>
 
-                        <!-- emmail address and password -->
+                        <!-- email address and password -->
                         <div class="row">
                           <div class="col-md-12 mb-5 wow fadeInUp" data-wow-delay=".8s">
                             <label class="form-label" for="email"><strong>Email Address</strong></label>
