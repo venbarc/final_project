@@ -209,14 +209,20 @@
                             </div>
                           
                         </div>
-                        
+                        <!-- checkbox tos and ps html  -->
+                        <div class="text-center mb-2 mt-2">
+                            <input type="checkbox" id="myCheckbox" required>
+                            <span class="checkmark"></span>
+                                Agree to <a href="tos.php">Terms and Condition</a> and <a href="privacypolicy.php">Privacy and Policy.</a>
+                        </div>
                         <!-- Submit button here -->
-                        <div class="text-center mb-12 pb-30 pt-30 wow fadeInUp" data-wow-delay="1s">
+                        <div class="text-center mb-12 pb-30 pt-30" id="reg_btn" style="display:none;">
                             <input type="submit" value="Register" class="btn btn-primary" name="submit">
                         </div>
-
+                        <!-- already a member and login link here  -->
                         <div class="text-center pb-25 wow fadeInUp" data-wow-delay="1s">
-                            <large>Already have an account? <br>
+                            <large>
+                              Already have an account? <br>
                               <a href="login.php" class="text-primary text-xl font-semibold">Login Here</a>
                             </large>
                         </div>
@@ -233,6 +239,18 @@
 
       <!-- Version 2 of Sticky navbar (hero3) -->
       <script>
+        // hide and unhide register button
+        const myCheckbox = document.getElementById('myCheckbox');
+        const reg_btn = document.getElementById('reg_btn');
+
+        myCheckbox.addEventListener('change', function() {
+            if(this.checked) {
+              reg_btn.style.display = 'block';
+            } else {
+              reg_btn.style.display = 'none';
+            }
+        });
+
             window.onscroll = function () 
             {
                 var header_navbar = document.querySelector(".hero3-section-wrapper-2 .header");
