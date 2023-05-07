@@ -68,7 +68,7 @@
                         <div class="col-lg-12">
                             <div class="section-title mb-60">
 
-                                <h2 class="pb-25 text-danger">Most Question Mistakes</h2>
+                                <h2 class="pb-25 text-danger">Most Mistaken Questions</h2>
 
                                 <?php
                                     //Get subject_token and subject 
@@ -166,10 +166,33 @@
                                                                 borderWidth: 1
                                                             }]
                                                         },
-                                                        options: {
+                                                        options: 
+                                                        {
                                                             scales: {
                                                                 y: {
-                                                                    beginAtZero: true
+                                                                    beginAtZero: true,
+                                                                    title: {
+                                                                        display: true,
+                                                                        text: 'Number of wrong and correct answers',
+                                                                        font: 
+                                                                        {
+                                                                            size: 16,
+                                                                            weight: 'bold',
+                                                                            family: 'Arial'
+                                                                        }
+                                                                    }
+                                                                },
+                                                                x: {
+                                                                    title: {
+                                                                        display: true,
+                                                                        text: 'Questions Numbers',
+                                                                        font: 
+                                                                        {
+                                                                            size: 16,
+                                                                            weight: 'bold',
+                                                                            family: 'Arial'
+                                                                        }
+                                                                    }
                                                                 }
                                                             },
                                                             plugins: {
@@ -179,10 +202,8 @@
                                                                         var ci = this.chart;
                                                                         var meta = ci.getDatasetMeta(index);
 
-                                                                        // See controller.isDatasetVisible comment
                                                                         meta.hidden = meta.hidden === null ? !ci.data.datasets[index].hidden : null;
 
-                                                                        // We hid a dataset ... rerender the chart
                                                                         ci.update();
                                                                     },
                                                                     labels: {
@@ -203,12 +224,7 @@
                                             </h3>
                                             <?php
                                         }
-                                        
-                                        
                                     }
-
-                                    
-                                
                                 ?>
                             
                             </div>

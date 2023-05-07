@@ -162,7 +162,7 @@
                               </div>
                               <div class="col-md-11">
                                 <button type="submit" class="btn btn-primary mb-30" id="add_subject" data-toggle="modal" data-target="#edit_modal6">
-                                  + Add Course Subject 
+                                  + Add Core Subject 
                                 </button>
 
                                   <?php

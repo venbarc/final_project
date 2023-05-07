@@ -85,12 +85,17 @@
                                 data.addRows(<?php echo json_encode($data); ?>);
 
                                 var options = {
-                                    title: 'Table Sizes in MB database',
-                                    legend: {position: 'none'},
-                                    chartArea: {width: '80%', height: '80%'},
-                                    hAxis: {title: 'Table Name'},
-                                    vAxis: {title: 'Table Size (MB)'},
-                                    colors: ['#444']
+                                  title: 'Table Sizes in MB database',
+                                  legend: {position: 'none'},
+                                  chartArea: {width: '80%', height: '80%'},
+                                  hAxis: {title: 'Table Name'},
+                                  vAxis: {
+                                      title: 'Table Size (MB)',
+                                      viewWindow: {
+                                          min: 0
+                                      }
+                                  },
+                                  colors: ['#444']
                                 };
 
                                 var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));

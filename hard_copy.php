@@ -97,16 +97,74 @@
 
                                                 ?>
                                                 <div class="row">
-                                                    <div class="col-md-10">
+                                                    <div class="col-md-10 mb-2">
                                                         <!-- Button to print the data -->
                                                         <button onclick="window.print()" class="btn btn-danger">Download Hard Copy</button>
                                                     </div>
                                                     <div class="col-md-2">
-                                                        <button type="button" class="btn btn-dark mb-20 wow fadeInUp" data-toggle="modal" data-target="#edit_modal8">
-                                                            View Answer Sheet
-                                                        </button>
+
+                                                        <!-- checkbox html  -->
+                                                        <label class="checkbox-container">
+                                                            <input type="checkbox" id="myCheckbox">
+                                                            <span class="checkmark"></span>
+                                                                View Answer Keys
+                                                        </label>
+                                                        <!-- checkbox css  -->
+                                                        <style>
+                                                            /* Hide the default checkbox */
+                                                            .checkbox-container input {
+                                                            position: absolute;
+                                                            opacity: 0;
+                                                            cursor: pointer;
+                                                            }
+                                                            /* Style the checkbox container */
+                                                            .checkbox-container {
+                                                            display: block;
+                                                            position: relative;
+                                                            padding-left: 25px;
+                                                            margin-bottom: 10px;
+                                                            cursor: pointer;
+                                                            font-size: 18px;
+                                                            }
+                                                            /* Style the checkmark */
+                                                            .checkmark {
+                                                            position: absolute;
+                                                            top: 0;
+                                                            left: 0;
+                                                            height: 20px;
+                                                            width: 20px;
+                                                            background-color: #fff;
+                                                            border: 2px solid #555;
+                                                            }
+                                                            /* When the checkbox is checked, add a background color to the checkmark */
+                                                            .checkbox-container input:checked ~ .checkmark {
+                                                            background-color: #555;
+                                                            }
+                                                            /* Add a pseudo-element to create the checkmark */
+                                                            .checkmark:after {
+                                                            content: "";
+                                                            position: absolute;
+                                                            display: none;
+                                                            }
+                                                            /* Show the checkmark when the checkbox is checked */
+                                                            .checkbox-container input:checked ~ .checkmark:after {
+                                                            display: block;
+                                                            }
+                                                            /* Style the checkmark pseudo-element */
+                                                            .checkbox-container .checkmark:after {
+                                                            left: 6px;
+                                                            top: 2px;
+                                                            width: 5px;
+                                                            height: 10px;
+                                                            border: solid white;
+                                                            border-width: 0 2px 2px 0;
+                                                            transform: rotate(45deg);
+                                                            }
+                                                        </style>
+
                                                     </div>
                                                 </div>
+                                                            
                                                 
                                                 <!-- style for print  -->
                                                 <style>
@@ -160,7 +218,12 @@
                                                             <tr>
                                                                 <th colspan="2">
                                                                     <!-- question  -->
-                                                                    <?php echo ' '.$count++.' .) '.$question.' ' ; ?>
+                                                                    <?php echo ' '.$count++.' .) '.$question.' 
+                                                                    <div class="text-success fw-bold answer-key" id="answer-key" style="display:none;">
+                                                                        Answer Key : ' . $answer . '
+                                                                    </div>'
+                                                                    ;?>
+
                                                                     <!-- image here  -->
                                                                     <?php
                                                                         if(empty($image))
@@ -177,17 +240,17 @@
                                                                 </th>
                                                             </tr>
                                                             <tr>
-                                                                <td>
+                                                                <td class="text-left">
                                                                     <?php echo 'A.) '.$opt1.'<br>'; ?>
                                                                     <?php echo 'B.) '.$opt2.''; ?>
                                                                 </td>
-                                                                <td>
+                                                                <td class="text-left">
                                                                     <?php echo ' C.) '.$opt3.'<br>'; ?>
                                                                     <?php echo ' D.) '.$opt4.' '; ?>
                                                                 </td>
                                                             </tr>
-                                                                
                                                         <?php
+
                                                     }
                                                     echo'
                                                     </table>
@@ -224,6 +287,21 @@
             <!-- ========================= hero2-section-wrapper-2 start ========================= -->
             
         <script>
+            // get answer keys when checkbox is checked
+            const myCheckbox = document.getElementById("myCheckbox");
+            const answerKeys = document.querySelectorAll(".answer-key");
+            myCheckbox.addEventListener("change", function() {
+                if (this.checked) {
+                    answerKeys.forEach(function(answerKey) {
+                        answerKey.style.display = "block";
+                    });
+                } else {
+                    answerKeys.forEach(function(answerKey) {
+                        answerKey.style.display = "none";
+                    });
+                }
+            });
+
             //Version 2 of Sticky navbar (hero2)
                 window.onscroll = function () 
                 {

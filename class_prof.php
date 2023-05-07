@@ -149,7 +149,7 @@
 
                                 // mails and pass mails 
                                 $mail->Username = 'eduplaymaker@gmail.com';
-                                $mail->Password = 'dsgadbydpiddscef';
+                                $mail->Password = 'eitilzvungtklpdy';
 
                                 $mail->SMTPSecure = 'tls';
                                 $mail->Port = 587;
@@ -159,17 +159,17 @@
                                 $mail->isHTML(true);
                                 $mail->Subject = 'Class Approval';
                                 $mail->Body = '
-                                <div style="border-radius: 1%; border: 5px dashed #28a745; padding: 5%; text-align: center; margin: 0 10%;">
-                                    <h1 style="color: #28a745;"> 
+                                <div style="border-radius: 1%; border: 3px dashed #28a745; padding: 5%; text-align: center; margin: 0 10%;">
+                                    <h3 style="color: #28a745;"> 
                                         Class Approved by Professor: 
-                                    </h1> 
-                                    <h2>
+                                    </h3> 
+                                    <h4>
                                       '.$full_name.' <br>
-                                      <span style="color: #007bff; text-decoration: underline; font-weight: 600; font-size: 26px;"> 
+                                      <span style="color: #007bff; text-decoration: underline; font-weight: 600; font-size: 19px;"> 
                                       '. $email .' <br>
                                       </span> 
                                       Subject: '.$subject.'
-                                    </h2>
+                                    </h4>
                                 </div>
                                 ';
                                 $mail->send();
@@ -203,7 +203,7 @@
 
                                 // mails and pass mails 
                                 $mail->Username = 'eduplaymaker@gmail.com';
-                                $mail->Password = 'dsgadbydpiddscef';
+                                $mail->Password = 'eitilzvungtklpdy';
 
                                 $mail->SMTPSecure = 'tls';
                                 $mail->Port = 587;
@@ -213,17 +213,17 @@
                                 $mail->isHTML(true);
                                 $mail->Subject = 'Class Approval';
                                 $mail->Body = '
-                                <div style="border-radius: 1%; border: 5px dashed #dc3545; padding: 5%; text-align: center; margin: 0 10%;">
-                                    <h1 style="color: #dc3545;"> 
+                                <div style="border-radius: 1%; border: 3px dashed #dc3545; padding: 5%; text-align: center; margin: 0 10%;">
+                                    <h3 style="color: #dc3545;"> 
                                         Class Rejected by Professor: 
-                                    </h1> 
-                                    <h2>
+                                    </h3> 
+                                    <h4>
                                       '.$full_name.' <br>
                                       <span style="color: #007bff; text-decoration: underline; font-weight: 600; font-size: 26px;"> 
                                       '. $email .' <br>
                                       </span> 
                                       Subject: '.$subject.'
-                                    </h2>
+                                    </h4>
                                 </div>
                                 ';
                                 $mail->send();

@@ -70,7 +70,7 @@
 
           // mails and pass mails 
           $mail->Username = 'eduplaymaker@gmail.com';
-          $mail->Password = 'dsgadbydpiddscef';
+          $mail->Password = 'eitilzvungtklpdy';
 
           $mail->SMTPSecure = 'tls';
           $mail->Port = 587;
@@ -80,18 +80,15 @@
           $mail->isHTML(true);
           $mail->Subject = 'Verification Pin';
           $mail->Body = '
-
-          <div style="border-radius: 1%; border: 2px solid #007bff; padding: 5%; text-align: center; margin: 0 10%;">
-              <h1 style="color: #007bff;"> 
+          <div style="border-radius: 1%; border: 3px dashed #007bff; padding: 5%; text-align: center; margin: 0 10%;">
+              <h3 style="color: #007bff;"> 
                   Learning ERA Verification 
-              </h1> 
-
-              <h2>
+              </h3> 
+              <h4>
                 Your verification pin: <br>
                 <span style="color: #007bff; text-decoration: underline; font-weight: 600; font-size: 26px;"> '. $pin .'</span> 
-              </h2>
+              </h4>
           </div>
-              
           ';
 
           // check if email sent 

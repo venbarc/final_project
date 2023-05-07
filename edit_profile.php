@@ -161,7 +161,7 @@
                                           
                                           echo '
                                             <div class="alert alert-success text-center" role="alert" id="myAlert">
-                                              Successfully Update Personal information.
+                                              Successfully Changed Password.
                                             </div>
                                           ';
                                         }

@@ -91,16 +91,13 @@
                                   </div>
                                   <div class="col-md-5">
                                     <h2 class="pb-20">'. $subject .' Class</h2>
-                                  </div>
-                                  <div class="col-md-6">
                                     <h5 class="pb-20"> Prof. '. $prof_name .' | <span class="text-primary"> '.$subject_token .' </span></h5>
                                   </div>
-                              
                                 </div>
                                 ';
 
                                 // get classmates 
-                                $sql_classmates = "select * from prof_class where subject='$subject' and subject_token='$subject_token' order by score desc";
+                                $sql_classmates = "select * from prof_class where subject='$subject' and subject_token='$subject_token' order by score desc limit 5";
                                 $res_classmates = mysqli_query($conn, $sql_classmates);
                                 
                                 $count = 1;

@@ -87,17 +87,17 @@
                             <div class="row" >
                                 <div class="col-sm-12 edit_modal3" >
                                     <label class="form-label"><h6> Current Password</h6></label>
-                                    <input type="password" class="form-control" name="current_password" minlength="8" required> 
+                                    <input type="password" class="form-control text-danger" name="current_password" placeholder="Current password"  minlength="8" required> 
                                     <br>
                                 </div>
                                 <div class="col-sm-6 edit_modal3" >
                                     <label class="form-label"><h6> New Password</h6></label>
-                                    <input type="password" class="form-control" name="new_pass" minlength="8" required> 
+                                    <input type="password" class="form-control text-danger" name="new_pass" placeholder="New password" minlength="8" required> 
                                     <br>
                                 </div>
                                 <div class="col-sm-6 edit_modal3" >
                                     <label class="form-label"><h6> Confirm Password</h6></label>
-                                    <input type="password" class="form-control" name="cnew_pass" minlength="8" required> 
+                                    <input type="password" class="form-control text-danger" name="cnew_pass" placeholder="Confirm New password" minlength="8" required> 
                                     <br>
                                 </div>
                             </div>
@@ -259,60 +259,6 @@
 
 
 
-
-<!--================================ Start view_add_quiz.php ======================================== -->
-        <!-- Edit Modal 7 button starts here  -->
-        <div class="modal fade" id="edit_modal8" tabindex="-1" role="dialog" aria-labelledby="edit_modal8Label" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title text-primary" id="edit_modal8Label">Answer Sheet</h5>
-                    </div>
-
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-12">
-                                <?php
-                                    //get quiz display data 
-                                    $sql_quiz_display = "select * from quiz_display where subject='$subject' and  subject_token='$subject_token' and quiz_token='$quiz_token' and prof_email='$email' ";
-                                    $res_quiz_display = mysqli_query($conn, $sql_quiz_display);
-                                    $count = 1;
-
-                                    if($res_quiz_display->num_rows > 0)
-                                    {
-                                        while($row = $res_quiz_display->fetch_assoc())
-                                        {
-                                            $answer = $row['answer'];
-
-                                            echo '
-                                            <div class="">
-                                                <h5 class="">'. $count++ .' .) '.$answer.'</h5> 
-                                            </div>
-                                            ';
-                                        }
-
-                                    }
-                                    else
-                                    {
-                                        ?>
-                                            <br>
-                                            <h3 style="color: white; background: rgb(0,0,0,0.4); text-align: center; padding:3%;"> No Records </h3>
-                                        <?php
-                                    }
-                                ?>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <!-- Modal 7 button End here  -->
-<!--================================ End view_add_quiz.php ======================================== -->
 
 
 

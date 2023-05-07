@@ -141,13 +141,19 @@
 
                         <!-- email address and password -->
                         <div class="row">
+                          <!-- email  -->
                           <div class="col-md-12 mb-5 wow fadeInUp" data-wow-delay=".8s">
                             <label class="form-label" for="email"><strong>Email Address</strong></label>
                             <input type="email" class="form-control" name="email" <?php echo isset($_GET['email']) ? "value='$email'" : "placeholder='Email address'" ?> required>
                           </div>
+                          <!-- password  -->
                           <div class="col-md-12 mb-5 wow fadeInUp" data-wow-delay=".8s">
                             <label class="form-label" for="password"><strong>Password</strong></label>
                             <input type="password" class="form-control" placeholder="Password" name="password" required>
+                          </div>
+                          <!-- forget pass modal  -->
+                          <div class="col-md-12 mb-5 wow fadeInUp" data-wow-delay=".8s">
+                            <a href="forgot_pass.php" class="text-danger">Forgot password?</a>
                           </div>
                         </div>
                         
@@ -161,7 +167,6 @@
                               <a href="register.php" class="text-primary text-xl font-semibold">Register Here</a>
                             </large>
                         </div>
-
                       </div>
                   </form>
               </div>
