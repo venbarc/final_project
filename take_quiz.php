@@ -126,8 +126,7 @@
                                       ?> 
 
                                         <form method="post">
-
-                                        <!-- buttons for previous and next and submit button================================================ -->
+                                          <!-- buttons for previous and next and submit button================================================ -->
                                           <div class="row">
                                             <div class="col-md-6">
                                                 <button type="button" id="prev" class="btn btn-primary">Previous</button>
@@ -173,101 +172,101 @@
                                          
                                           <!-- wrap thw whole while to display question one by one on the same position -->
                                           <div id="question-container">
-                                      <?php
+                                            <?php
 
-                                            $rows = array();
-                                            while ($row = $res_get_quiz_ques->fetch_assoc()) {
-                                                $rows[] = $row;
-                                            }
-                                            
-                                            // Durstenfeld shuffle algorithm ========================================== --->
-                                            $n = count($rows);
-                                            for ($i = $n - 1; $i >= 1; $i--) 
-                                            {
-                                                $j = mt_rand(0, $i);
-                                                $temp = $rows[$i];
-                                                $rows[$i] = $rows[$j];
-                                                $rows[$j] = $temp;
-                                            }
-                                            foreach ($rows as $row) 
-                                            {
-                                              $question = $row['question'];
-                                              $opt1 = $row['opt1'];
-                                              $opt2 = $row['opt2'];
-                                              $opt3 = $row['opt3'];
-                                              $opt4 = $row['opt4'];
-                                              $answer = $row['answer'];
-                                              $image = $row['image'];
+                                                  $rows = array();
+                                                  while ($row = $res_get_quiz_ques->fetch_assoc()) {
+                                                      $rows[] = $row;
+                                                  }
+                                                  
+                                                  // Durstenfeld shuffle algorithm ========================================== --->
+                                                  $n = count($rows);
+                                                  for ($i = $n - 1; $i >= 1; $i--) 
+                                                  {
+                                                      $j = mt_rand(0, $i);
+                                                      $temp = $rows[$i];
+                                                      $rows[$i] = $rows[$j];
+                                                      $rows[$j] = $temp;
+                                                  }
+                                                  foreach ($rows as $row) 
+                                                  {
+                                                    $question = $row['question'];
+                                                    $opt1 = $row['opt1'];
+                                                    $opt2 = $row['opt2'];
+                                                    $opt3 = $row['opt3'];
+                                                    $opt4 = $row['opt4'];
+                                                    $answer = $row['answer'];
+                                                    $image = $row['image'];
 
-                                              // Get the tools 
-                                              $text_tool = $row['text_tool'];
-                                              $color_tool = $row['color_tool'];
-                                              $img_tool = $row['img_tool'];
-                                              
-                                              ?>
-                                                <!-- add question in row to display question one by one  -->
-                                                <div class="row question">
-                                                  <!-- question  -->
-                                                  <div class="col-md-12 pb-25">
-                                                    <?php echo '<'.$text_tool.' style=color:'.$color_tool.' >'.$count_ques++ .'. ) '. $question .'</'.$text_tool.'>'?>
-                                                    <!-- image  -->
-                                                    <?php 
-                                                      if(empty($image))
-                                                      {
-                                                        $image = "";
-                                                      }
-                                                      else
-                                                      {
-                                                        echo'
-                                                          <img src="'.$image.'" height='.$img_tool.' width='.$img_tool.'>
-                                                        ';
-                                                      }
-                                                     
+                                                    // Get the tools 
+                                                    $text_tool = $row['text_tool'];
+                                                    $color_tool = $row['color_tool'];
+                                                    $img_tool = $row['img_tool'];
+                                                    
                                                     ?>
-                                                  </div>
+                                                      <!-- add question in row to display question one by one  -->
+                                                      <div class="row question">
+                                                        <!-- question  -->
+                                                        <div class="col-md-12 pb-25">
+                                                          <?php echo '<'.$text_tool.' style=color:'.$color_tool.' >'.$count_ques++ .'. ) '. $question .'</'.$text_tool.'>'?>
+                                                          <!-- image  -->
+                                                          <?php 
+                                                            if(empty($image))
+                                                            {
+                                                              $image = "";
+                                                            }
+                                                            else
+                                                            {
+                                                              echo'
+                                                                <img src="'.$image.'" height='.$img_tool.' width='.$img_tool.'>
+                                                              ';
+                                                            }
+                                                          
+                                                          ?>
+                                                        </div>
 
-                                                  <?php
-                                                   // shuffled options -->
-                                                   $options = array($opt1, $opt2, $opt3, $opt4);
-                                                   shuffle($options);
-                                                  ?>
-                                                  <!-- options  -->
-                                                  <div class="col-md-6">
-                                                    <label class="rad-label">
-                                                        <input type="radio" class="rad-input" name="answer[<?php echo $row['quiz_id'] ?>]" value="<?php echo $options[0] ?>">
-                                                        <div class="rad-design"></div>
-                                                        <div class="rad-text"><h6>A.) <?php echo $options[0] ?> </h6></div>
-                                                    </label>
+                                                        <?php
+                                                        // shuffled options -->
+                                                        $options = array($opt1, $opt2, $opt3, $opt4);
+                                                        shuffle($options);
+                                                        ?>
+                                                        <!-- options  -->
+                                                        <div class="col-md-6">
+                                                          <label class="rad-label">
+                                                              <input type="radio" class="rad-input" name="answer[<?php echo $row['quiz_id'] ?>]" value="<?php echo $options[0] ?>">
+                                                              <div class="rad-design"></div>
+                                                              <div class="rad-text"><h6>A.) <?php echo $options[0] ?> </h6></div>
+                                                          </label>
 
-                                                    <label class="rad-label">
-                                                        <input type="radio" class="rad-input" name="answer[<?php echo $row['quiz_id'] ?>]" value="<?php echo $options[1] ?>">
-                                                        <div class="rad-design"></div>
-                                                        <div class="rad-text"><h6>B.) <?php echo $options[1] ?> </h6></div>
-                                                    </label>
+                                                          <label class="rad-label">
+                                                              <input type="radio" class="rad-input" name="answer[<?php echo $row['quiz_id'] ?>]" value="<?php echo $options[1] ?>">
+                                                              <div class="rad-design"></div>
+                                                              <div class="rad-text"><h6>B.) <?php echo $options[1] ?> </h6></div>
+                                                          </label>
 
-                                                    <label class="rad-label">
-                                                        <input type="radio" class="rad-input" name="answer[<?php echo $row['quiz_id'] ?>]" value="<?php echo $options[2] ?>">
-                                                        <div class="rad-design"></div>
-                                                        <div class="rad-text"><h6>C.) <?php echo $options[2] ?> </h6></div>
-                                                    </label>
+                                                          <label class="rad-label">
+                                                              <input type="radio" class="rad-input" name="answer[<?php echo $row['quiz_id'] ?>]" value="<?php echo $options[2] ?>">
+                                                              <div class="rad-design"></div>
+                                                              <div class="rad-text"><h6>C.) <?php echo $options[2] ?> </h6></div>
+                                                          </label>
 
-                                                    <label class="rad-label">
-                                                        <input type="radio" class="rad-input" name="answer[<?php echo $row['quiz_id'] ?>]" value="<?php echo $options[3] ?>">
-                                                        <div class="rad-design"></div>
-                                                        <div class="rad-text"><h6>D.) <?php echo $options[3] ?> </h6></div>
-                                                    </label>
+                                                          <label class="rad-label">
+                                                              <input type="radio" class="rad-input" name="answer[<?php echo $row['quiz_id'] ?>]" value="<?php echo $options[3] ?>">
+                                                              <div class="rad-design"></div>
+                                                              <div class="rad-text"><h6>D.) <?php echo $options[3] ?> </h6></div>
+                                                          </label>
 
-                                                    <!-- default answer -->
-                                                    <input type="radio" name="answer[<?php echo $row['quiz_id'] ?>]" value="default_answer" checked style="display:none;">
-                                                  </div>
+                                                          <!-- default answer -->
+                                                          <input type="radio" name="answer[<?php echo $row['quiz_id'] ?>]" value="default_answer" checked style="display:none;">
+                                                        </div>
 
-                                                </div>
+                                                      </div>
 
-                                              <?php
-                                              
-                                            }
-                                      ?>
-                                            </div>
+                                                    <?php
+                                                    
+                                                  }
+                                            ?>
+                                          </div>
                                         </form>
                                       <?php
 
